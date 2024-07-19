@@ -1,0 +1,152 @@
+/* Estilos globales y variables */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root {
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+    --fuente-monserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-monserrat);
+}
+
+.presentacion {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido {
+    display: flex;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo,
+.presentacion__contenido__subtitulo {
+    font-family: var(--fuente-krona);
+}
+
+.presentacion__contenido__titulo {
+    font-size: 2rem;
+}
+
+.presentacion__contenido__subtitulo {
+    font-size: 1.5rem;
+}
+
+.presentacion__contenido__texto {
+    font-size: 1.5rem;
+}
+
+/* Estilos para la sección de proyectos */
+.proyectos {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.proyectos__titulo {
+    font-family: var(--fuente-krona);
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.proyectos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.proyecto {
+
+    background-color: var(--color-primario);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto__imagen {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.proyecto__titulo {
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+}
+
+.proyecto__descripcion {
+    font-family: var(--fuente-monserrat);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.proyecto__enlace {
+    font-family: var(--fuente-monserrat);
+    font-size: 1rem;
+    color: var(--color-terciario);
+    text-decoration: none;
+    border: 2px solid var(--color-terciario);
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.proyecto__enlace:hover {
+    background-color: var(--color-hover);
+    color: var(--color-secundario);
+}
+
+.footer {
+    background-color: var(--color-terciario);
+
+    color: var(--color-primario);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .header {
+        padding: 10%;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido {
+        width: 100%;
+    }
+
+    .presentacion__img {
+        width: 100%;
+        max-width: 500px;
+        /* Ajusta este valor según el tamaño máximo deseado para la imagen */
+        margin: 0 auto;
+        /* Centra la imagen horizontalmente */
+    }
+
+    .proyecto {
+        width: 100%;
+    }
+}
