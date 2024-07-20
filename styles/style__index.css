@@ -4,7 +4,7 @@
     --color-primario: #2b2828;
     --color-secundario: #F6F6F6;
     --color-terciario: #22D4FD;
-    --color-hover: #272727;
+    --color-hover: #041832;
 
 
     --fuente-monserrat: 'Montserrat', sans-serif;
@@ -18,8 +18,25 @@
 
 body {
     box-sizing: border-box;
-    background-color: var(--color-primario);
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
     color: var(--color-secundario);
+    position: relative; /* Asegura que el pseudo-elemento esté relativo al body */
+}
+
+body::before {
+    background-image: url("/assets/code.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover; /* Ajusta esto según tus necesidades */
+    content: "";
+    display: block;
+    position: fixed; /* Cambiado a fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás de todo el contenido */
 }
 
 .presentacion {
