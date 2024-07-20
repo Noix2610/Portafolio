@@ -24,7 +24,7 @@ body {
 }
 
 body::before {
-    background-image: url("/assets/code.png");
+    background-image: url("../assets/code.png");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover; /* Ajusta esto según tus necesidades */
